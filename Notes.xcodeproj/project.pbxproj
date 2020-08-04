@@ -16,6 +16,7 @@
 		60F773D724D9D81A00B40F8E /* DisplayNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F773D624D9D81A00B40F8E /* DisplayNoteViewController.swift */; };
 		60F773D924D9D8B700B40F8E /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F773D824D9D8B700B40F8E /* ListNotesTableViewCell.swift */; };
 		60F773DF24D9DA3300B40F8E /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60F773DD24D9DA3300B40F8E /* Notes.xcdatamodeld */; };
+		60F773E124DA134500B40F8E /* NewNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F773E024DA134500B40F8E /* NewNotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		60F773D624D9D81A00B40F8E /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayNoteViewController.swift; sourceTree = "<group>"; };
 		60F773D824D9D8B700B40F8E /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		60F773DE24D9DA3300B40F8E /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		60F773E024DA134500B40F8E /* NewNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		60F773CF24D9D40A00B40F8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				60F773E024DA134500B40F8E /* NewNotes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				60F773D524D9D76D00B40F8E /* ListNotesTableViewController.swift in Sources */,
 				60F773DF24D9DA3300B40F8E /* Notes.xcdatamodeld in Sources */,
 				60F773D924D9D8B700B40F8E /* ListNotesTableViewCell.swift in Sources */,
+				60F773E124DA134500B40F8E /* NewNotes.swift in Sources */,
 				60F773D124D9D49300B40F8E /* Data+convertToString.swift in Sources */,
 				60F773D724D9D81A00B40F8E /* DisplayNoteViewController.swift in Sources */,
 				60F773B724D9CB9C00B40F8E /* AppDelegate.swift in Sources */,
