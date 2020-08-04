@@ -28,15 +28,19 @@ class ListNotesTableViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
             
         switch identifier {
-        case "displayNote":
-            print ("note call tapped")
-            
-        case "addNote":
-            print("create note ba button item tapped")
+        case "save":
+            print("save bar button item tapped")
+
+        case "cancel":
+            print("cancel bar button item tapped")
         
         default:
             print("unexpected seque identifier")
         }
+    }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+
     }
     
 }

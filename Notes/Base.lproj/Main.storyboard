@@ -66,7 +66,7 @@
                     <navigationItem key="navigationItem" title="Notes" id="zkL-Pi-IZt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gjb-fb-VDK">
                             <connections>
-                                <segue destination="8NO-ab-hfJ" kind="show" identifier="addNote" id="L2m-Tt-O13"/>
+                                <segue destination="8NO-ab-hfJ" kind="show" id="L2m-Tt-O13"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,11 +110,20 @@
                         <viewLayoutGuide key="safeArea" id="3VY-oQ-4Pr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="pfw-0L-1JQ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4jW-GP-92H"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jdE-X4-Dvj"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4jW-GP-92H">
+                            <connections>
+                                <segue destination="13d-B0-yAj" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="Typ-05-AXM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jdE-X4-Dvj">
+                            <connections>
+                                <segue destination="13d-B0-yAj" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="uNQ-SB-sPB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3b-fg-HIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="13d-B0-yAj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1762" y="31"/>
         </scene>
@@ -138,6 +147,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L2m-Tt-O13"/>
+        <segue reference="lhZ-B2-UJE"/>
     </inferredMetricsTieBreakers>
 </document>
