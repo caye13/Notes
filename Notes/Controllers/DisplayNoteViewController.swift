@@ -10,6 +10,8 @@ import UIKit
 
 class DisplayNoteViewController: UIViewController {
     
+    var note: Note?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,17 +24,27 @@ class DisplayNoteViewController: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
+
+        guard let identifier = segue.identifier,
+            let destination = segue.destination as? ListNotesTableViewController
+            else { return }
 
         switch identifier {
-        case "save":
+
+        case "save" where note != nil:
+            note?.title = titleTextField.text ?? ""
+            note?.content = contentTextView.text ?? ""
+
+            destination.tableView.reloadData()
+
+      
+        case "save" where note == nil:
             let note = Note()
-            
             note.title = titleTextField.text ?? ""
             note.content = contentTextView.text ?? ""
             note.modificationTime = Date()
-            
-            let destination = segue.destination as! ListNotesTableViewController
+
+            // 4
             destination.notes.append(note)
 
         case "cancel":
@@ -40,6 +52,21 @@ class DisplayNoteViewController: UIViewController {
 
         default:
             print("unexpected segue identifier")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // 1
+        if let note = note {
+            // 2
+            titleTextField.text = note.title
+            contentTextView.text = note.content
+        } else {
+            // 3
+            titleTextField.text = ""
+            contentTextView.text = ""
         }
     }
     

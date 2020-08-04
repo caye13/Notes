@@ -13,8 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    // i added the UIApplication.LaunchOption but like original was UIApplicationLaunchOptionsKey
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }

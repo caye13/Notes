@@ -35,18 +35,32 @@ class ListNotesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            notes.remove(at: indexPath.row)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
-            
-        switch identifier {
-        case "save":
-            print("save bar button item tapped")
 
-        case "cancel":
-            print("cancel bar button item tapped")
-        
+        switch identifier {
+        case "displayNote":
+            // 1
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+
+            // 2
+            let note = notes[indexPath.row]
+            // 3
+            let destination = segue.destination as! DisplayNoteViewController
+            // 4
+            destination.note = note
+
+        case "addNote":
+            print("create note bar button item tapped")
+
         default:
-            print("unexpected seque identifier")
+            print("unexpected segue identifier")
         }
     }
     
